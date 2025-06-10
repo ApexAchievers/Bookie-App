@@ -3,7 +3,7 @@
 
 export default function Navbar() {
     return (
-        <nav className="flex items-center justify-between mt-10 px-8">
+        <nav className="flex items-center justify-between mt-10 px-8 ">
             <h1 className="text-2xl font-bold flex gap-2">
                 <span>Bookie</span>
                 <span className="text-purple-800">App</span>
@@ -17,7 +17,7 @@ export default function Navbar() {
                     <li><a href="/" className="hover:underline">Add Book</a></li>
                     <li><a href="/" className="hover:underline">Edit Book</a></li>
                 </ul>
-                <button className="cursor-pointer border py-2 px-6 bg-purple-800 text-white rounded">
+                <button className="cursor-pointer border py-2 px-2 bg-purple-800 text-white rounded-full">
                     Get Started
                 </button>
             </div>

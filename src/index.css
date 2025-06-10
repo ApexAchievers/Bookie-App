@@ -1,1 +1,38 @@
 @import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-brown:#9C5C09D7;
+    --color-primary: #D1C4B3A8;
+    --color-secondary:#A78457A2;
+}
+
+/* Custom Animation Keyframes */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

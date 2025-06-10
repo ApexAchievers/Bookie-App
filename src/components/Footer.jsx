@@ -3,7 +3,7 @@ import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-900 text-white py-10 px-6">
+        <footer className="bg-blue-900 text-white mt-16">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
                 {/* Branding + Description */}
@@ -51,6 +51,8 @@ export default function Footer() {
                 Non-Copyright© 2025 BookieApp. All rights reserved.
             </div>
         </footer>
+
+        
 
 
     );
