@@ -3,18 +3,18 @@ import { Linkedin, Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer className="bg-blue-900 text-white mt-16">
+        <footer className="bg-brown text-white mt-16">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
 
                 {/* Branding + Description */}
                 <div>
-                    <h2 className="text-xl font-bold mb-2">📘 Bookie App</h2>
-                    <p className="text-sm text-white">Getting Informations The Mordern Way</p>
+                    <h2 className="text-xl font-bold mb-2 mt-8">📘 Bookie App</h2>
+                    <p className="text-sm text-white mb-4">Getting Informations The Mordern Way</p>
                 </div>
 
                 {/* Product Links */}
                 <div>
-                    <h3 className="font-semibold mb-2">Product</h3>
+                    <h3 className="font-semibold mb-2 mt-8">Product</h3>
                     <ul className="space-y-1 text-sm text-gray-300">
                         <li>Books</li>
                         <li>View Books</li>
@@ -25,7 +25,7 @@ export default function Footer() {
 
                 {/* Support Links */}
                 <div>
-                    <h3 className="font-semibold mb-2">Support</h3>
+                    <h3 className="font-semibold mb-2 mt-8">Support</h3>
                     <ul className="space-y-1 text-sm text-gray-300">
                         <li>Contact Us</li>
                         <li>E-mail</li>
@@ -34,7 +34,7 @@ export default function Footer() {
 
                 {/* Company Links */}
                 <div>
-                    <h3 className="font-semibold mb-2">Company</h3>
+                    <h3 className="font-semibold mb-2 mt-8">Company</h3>
                     <ul className="space-y-1 text-sm text-gray-300">
                         <li>About</li>
                     </ul>
