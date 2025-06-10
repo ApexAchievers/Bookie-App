@@ -1,6 +1,5 @@
 import React from 'react'
 
-// import React from 'react';
 
 // const MyComponent = () => {
 //   const imageUrl = 'https://example.com/image.jpg'; // Replace with your image URL
@@ -12,7 +11,7 @@ import React from 'react'
 //   );
 // };
 
-// export default MyComponent;
+// export default MyComponent;/
 
 
 const bornaCrimeUrl = 'https://i.pinimg.com/736x/52/a4/67/52a467fd14af1328cba0e0ca9028f371.jpg'; 
@@ -20,13 +19,104 @@ const bornaCrimeUrl = 'https://i.pinimg.com/736x/52/a4/67/52a467fd14af1328cba0e0
 
 export default function Books() {
   return(
-    <div>
+    <>
+     <div className='flex grid-cols-4 gap-4 pt-2'>
       <div>
-        <div><img src="bornaCrimeUrl" alt="Born a Crime" /></div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
         <h2>Author</h2>
         <h2>Best Seller</h2>
       </div>
     </div>
+     <div className='flex grid-cols-4 gap-4 pt-2'>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+      <div>
+        <div><img src= {bornaCrimeUrl} alt="Born a Crime" /></div>
+        <h2>Author</h2>
+        <h2>Best Seller</h2>
+      </div>
+    </div>
+    </>
+   
+    
   );
 }
 
