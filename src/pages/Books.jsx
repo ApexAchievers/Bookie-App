@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BookCard from '../components/BookCard';
@@ -6,7 +6,6 @@ import Bornacrime from '../assets/images/Bornacrime.jpg';
 import everythingunevahad from '../assets/images/everythingunevahad.jpg';
 import malcomx from '../assets/images/malcomx.jpg'
 import { useState } from 'react';
-import { apiClient } from '../api/client';
 
 
 
@@ -123,24 +122,7 @@ const books = [
 ];
 
 
-const {allBooks, setBooks} = useState([]);
 
-
-const getBooks = () =>{
-
-  apiClient.get('/api/v1/books')
-  .then((response) => {
-    console.log(response);
-  })
-
-  .catch((error) => {
-    console.log(error)
-  })
-  
-
-}
-
-useEffect(getBooks, [])
 
 
 export default function Books() {
@@ -168,7 +150,7 @@ export default function Books() {
         </div>
 
         <div className="flex justify-center items-center gap-2 mt-4 mb-8">
-          <button className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-gray-700">
+          <button className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-gray-700" disabled>
             Previous
           </button>
           <button className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">
