@@ -1,8 +1,10 @@
-import React from 'react'
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const EditBook = () => {
   return (
-
+    <>
+    <Navbar />
     <div className="bg-[url(./assets/images/Book-ab4.jpg)] bg-cover bg-no-repeat min-h-screen p-8">
   <div className="text-center mb-8">
     <h1 className="font-bold text-4xl text-violet-800 ">Edit Book Libraries</h1>
@@ -89,6 +91,8 @@ const EditBook = () => {
     </button>
   </form>
 </div>
+    <Footer />
+    </>
 
   )
 }
