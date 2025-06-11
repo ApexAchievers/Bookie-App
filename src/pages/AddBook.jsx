@@ -8,7 +8,7 @@ const AddBook = () => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow bg-[url('./assets/images/Book-ab7.jpg')] bg-cover bg-no-repeat bg-[center_20px] pt-16 pb-28 px-6">
+      <main className="flex-grow bg-[url('./assets/images/Book-ab5.jpg')] bg-cover bg-no-repeat bg-[center_20px] pt-16 pb-28 px-6">
         <div className="max-w-7xl mx-auto px-20 py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12 rounded-xl">
 
           {/* Heading Section - Right with Animation */}
@@ -23,19 +23,8 @@ const AddBook = () => {
                 <span className="inline-block animate-[slideInUp_0.8s_ease-out_0.4s_both]">
                   Your Library
                 </span>
-                <br />
-                <span className="inline-block animate-[slideInUp_0.8s_ease-out_0.6s_both]">
-                  Like Never Before
-                </span>
-                <span className="inline-block animate-[bounceIn_1s_ease-out_1.2s_both] ml-2">
-                  📚
-                </span>
               </h1>
             </div>
-            
-            <p className="text-lg font-bold text-center text-black max-w-md mx-auto md:mx-0">
-              Add a book to the collection.
-            </p>
           </div>
 
           {/* Form Section - Left */}
