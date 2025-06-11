@@ -150,7 +150,7 @@ export default function Books() {
         </div>
 
         <div className="flex justify-center items-center gap-2 mt-4 mb-8">
-          <button className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-gray-700" disabled>
+          <button className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 text-gray-700">
             Previous
           </button>
           <button className="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">
