@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import BookCard from '../components/BookCard';
@@ -6,6 +6,7 @@ import Bornacrime from '../assets/images/Bornacrime.jpg';
 import everythingunevahad from '../assets/images/everythingunevahad.jpg';
 import malcomx from '../assets/images/malcomx.jpg'
 import { useState } from 'react';
+import { apiClient } from '../api/client';
 
 
 
@@ -122,7 +123,24 @@ const books = [
 ];
 
 
+const {allBooks, setBooks} = useState([]);
 
+
+const getBooks = () =>{
+
+  apiClient.get('/api/v1/books')
+  .then((response) => {
+    console.log(response);
+  })
+
+  .catch((error) => {
+    console.log(error)
+  })
+  
+
+}
+
+useEffect(getBooks, [])
 
 
 export default function Books() {
