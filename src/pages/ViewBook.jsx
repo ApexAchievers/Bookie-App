@@ -5,11 +5,11 @@ export default function ViewBook() {
     <section>
       <h1 className='text-4xl text-center font-bold'>Viewbook</h1>
 
-      <div className='flex flex-row mt-4 gap-4'>
+      <div className='max-w-2xl mx-auto p-6 bg-white rounded-lg'>
 
-        <div className='w-full bg-gray-400'>
+        <div className='flex flex-row justify-center'>
           <img src={BornaCrime} alt="Single Book" />
-          </div>
+        </div>
         <p>
           <span className='text-3xl text-center'>Synopsis</span> <br />
           THE #1 NEW YORK TIMES BESTSELLER FROM THE AUTHOR OF THE MARTIAN • Soon to be a major motion picture starring Ryan Gosling, directed by Phil Lord and Christopher Miller, with a screenplay by Drew Goddard
@@ -18,9 +18,20 @@ export default function ViewBook() {
 
           HUGO AWARD FINALIST • ONE OF THE YEAR’S BEST BOOKS: Bill Gates, GatesNotes, New York Public Library, Parade, Newsweek, Polygon, Shelf Awareness, She Reads, Kirkus Reviews, Library Journal • New York Times Readers Pick: 100 Best Books of the 21st Century
         </p>
+
+        <div>
+          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center'>Edit</button>
+          <button>Delete</button>
+        </div>
+
+
       </div>
     </section>
+
+
 
   );
 
 }
+
+
