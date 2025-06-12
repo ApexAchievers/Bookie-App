@@ -8,7 +8,7 @@ export default function Home(){
         <>
         <Navbar />
         {/* Hero Section */}
-      <section className="relative bg-[url(./assets/images/homepage-bgimg.jpg)] bg-cover bg-center py-12 sm:py-16 lg:py-20 xl:py-24">
+      <section className="relative pt-42 bg-[url(./assets/images/homepage-bgimg.jpg)] bg-cover bg-center py-12 sm:py-16 lg:py-20 xl:py-24">
         <div className="absolute inset-0 bg-black/50 z-0"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-12 items-center">

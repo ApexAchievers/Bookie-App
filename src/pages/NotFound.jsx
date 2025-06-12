@@ -13,7 +13,8 @@ export default function NotFound() {
       {/* <Navbar /> */}
       <section>
         {/* <div className='w-64 h-auto mx-auto'> */}
-        <img src={image404} className='flex justify-center items-center h-screen px-80' />
+        <img src={image404} className='flex justify-center items-center h-screen px-80'  />
+        
 
         {/* </div> */}
         <div className='flex justify-center mt-2'>
