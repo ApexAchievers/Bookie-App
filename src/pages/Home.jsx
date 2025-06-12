@@ -64,7 +64,7 @@ export default function Home() {
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-12 items-center">
             <div className="mb-10 lg:mb-0">
 
-              <h1 className="swipe-in-left text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight" style={{ animationDelay: "0.5s" }}>
+              <h1 className="swipe-in-left text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl mt-10 font-bold text-white leading-tight" style={{ animationDelay: "0.5s" }}>
                 Easy and Effective
                 <span className="block">Library Management</span>
                 <span className="block">with <span className="text-[#DF912CF1]">EZLib</span></span>
@@ -93,7 +93,7 @@ export default function Home() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
+              <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 transform rotate-0 hover:rotate-2 transition-transform duration-300">
                 <div className="bg-gradient-to-br from-[#D1C4B3A8] to-gray-100 rounded-lg p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Library Dashboard</h3>
