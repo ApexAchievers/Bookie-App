@@ -29,7 +29,8 @@ const AddBook = () => {
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow bg-[url('./assets/images/Book-ab6.jpg')] bg-cover bg-no-repeat bg-[center_10px] pt-16 pb-20 px-6">
+      <main className="flex-grow bg-[url('./assets/images/Book-ab5.jpg')] bg-cover bg-no-repeat bg-[center_10px] pt-16 pb-20 px-6">
+      <div className="absolute insert-0 bg-black/50"></div>
         <div className="max-w-7xl mx-auto px-20 py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12 rounded-xl">
           {/* Heading Section - Right with Animation */}
           <div className="text-center md:text-right w-full md:w-1/2">
@@ -69,7 +70,7 @@ const AddBook = () => {
                 name="Title"
                 required
                 placeholder="e.g., The Great Gatsby"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
@@ -86,7 +87,7 @@ const AddBook = () => {
                 name="Author"
                 required
                 placeholder="e.g., F. Scott Fitzgerald"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
@@ -103,7 +104,7 @@ const AddBook = () => {
                 name="yearPublished"
                 required
                 placeholder="e.g., 1925"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
@@ -118,7 +119,7 @@ const AddBook = () => {
               <select
                 name="Category"
                 required
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               >
                 <option value="">Select a category</option>
                 <option value="Fiction">Fiction</option>
@@ -134,6 +135,24 @@ const AddBook = () => {
               </select>
             </div>
 
+            {/* Image url */}
+
+            <div className="flex flex-col">
+              <label
+                htmlFor="imageUrl"
+                className="text-md font-semibold text-black mb-1 pl-1"
+              >
+                Image URL
+              </label>
+              <input
+                type="url"
+                name="ImageUrl"
+                placeholder="https://example.com/image.jpg"
+                required
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+              />
+            </div>
+
             {/* Description */}
             <div className="flex flex-col">
               <label
@@ -147,7 +166,7 @@ const AddBook = () => {
                 name="Description"
                 required
                 placeholder="Brief summary of the book"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
