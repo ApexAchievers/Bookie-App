@@ -33,7 +33,7 @@ export default function Books() {
     apiClient.get('/api/v1/books')
       .then((response) => {
         console.log(response.data);
-        setBooks(response.data.data);
+        setBooks(response.data);
       })
 
       .catch((error) => {
