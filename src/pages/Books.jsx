@@ -47,15 +47,16 @@ export default function Books() {
   //     apiClient.delete(`//api/v1/books/68488ae08a88b225c466a15f${book.id}`)
   //       .then((response) => {
   //         console.log(response);
-  
+
   //         location.reload();
   //       })
   //       .catch((error) => {
   //         console.log(error);
   //       })
-  // onClick={deleteBook}
   //   }
-  
+
+  // onClick={deleteBook}
+
 
 
   return (
@@ -63,13 +64,14 @@ export default function Books() {
       <section className='bg-gray-100'>
         <Navbar />
 
-        <div>
+       <div>
+         <div>
           <input type="text" placeholder='Search by title,year, author' name='searchbar' className='border-2 border-amber-500 px-6 pb-1 rounded-md mt-2 ml-8 bg-white' />
           <button>
           </button>
         </div>
 
-        
+
 
 
 
@@ -99,6 +101,7 @@ export default function Books() {
             Next
           </button>
         </div>
+       </div>
 
         <Footer />
 
