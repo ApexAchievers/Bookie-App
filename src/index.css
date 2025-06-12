@@ -37,3 +37,16 @@
   }
 }
 
+
+  .swipe-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    animation: swipeInLeft 0.8s cubic-bezier(.4,0,.2,1) forwards;
+  }
+  @keyframes swipeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+

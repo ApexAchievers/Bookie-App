@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Star, BarChart3, BookOpen, Users, Shield, CheckCircle, Search, Smile, ArrowRight, Linkedin, Twitter, Github, Mail, Phone, Globe, Award } from "lucide-react";
+import { Star, BarChart3, BookOpen, Users, Shield, CheckCircle, Search, Smile, ArrowRight, Mail, Phone, Globe, Award } from "lucide-react";
+import { Link } from "react-router";
 import bookopened from "../assets/images/bookopened.PNG"
 import bookstack from "../assets/images/bookstack.PNG"
 import google from "../assets/images/Google.png"
@@ -16,58 +17,39 @@ export default function Home() {
   // Team members data
   const teamMembers = [
     {
-      name: "Sarah Johnson",
+      name: "Jerusha",
       role: "Chief Executive Officer",
-      bio: "Visionary leader with 15+ years in library technology and digital transformation.",
+      bio: "Visionary leader with 5+ years in library technology and digital transformation.",
       image: "",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "sarah@librarypro.com"
-      }
+      
     },
     {
-      name: "Michael Chen",
+      name: "Prince",
       role: "Chief Technology Officer",
-      bio: "Full-stack architect passionate about building scalable library management solutions.",
+      bio: "Passionate about building scalable library management in the system.",
       image: "",
-      social: {
-        linkedin: "#",
-        github: "#",
-        email: "michael@librarypro.com"
-      }
+      
     },
     {
-      name: "Felicity Bafoaa",
+      name: "Felicity",
       role: "Head of Product Design",
       bio: "UX/UI expert dedicated to creating intuitive and accessible library experiences.",
       image: "",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "emily@librarypro.com"
-      }
+      
     },
     {
-      name: "David Thompson",
-      role: "Library Systems Specialist",
-      bio: "Former head librarian with deep expertise in library operations and workflows.",
+      name: "Stella",
+      role: "User Experience & Access Strategist",
+      bio: "Focuses on the navigation flow to make our system easy to use.",
       image: "",
-      social: {
-        linkedin: "#",
-        email: "david@librarypro.com"
-      }
+      
     },
     {
-      name: "Comfort Parker",
-      role: "Customer Success Manager",
-      bio: "Dedicated to ensuring every library achieves success with our platform and support.",
+      name: "Comfort",
+      role: "Back-End Systems Architect",
+      bio: "Dedicated to backend services, including API logic for borrowing, returning and storing records.",
       image: "",
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        email: "lisa@librarypro.com"
-      }
+      
     }
   ];
 
@@ -81,29 +63,37 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-12 items-center">
             <div className="mb-10 lg:mb-0">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+
+              <h1 className="swipe-in-left text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight" style={{ animationDelay: "0.5s" }}>
                 Easy and Effective
                 <span className="block">Library Management</span>
-                <span className="block text-[#DF912CF1]">with EZLib</span>
+                <span className="block">with <span className="text-[#DF912CF1]">EZLib</span></span>
               </h1>
-              <p className="font-medium mt-4 sm:mt-6 text-lg sm:text-xl text-white leading-relaxed max-w-2xl">
+              <p className="swipe-in-left font-medium mt-4 sm:mt-6 text-lg sm:text-xl text-white leading-relaxed max-w-2xl" style={{ animationDelay: "0.5s" }}>
                 Track, organize and manage your books with our comprehensive management system.
                 From catalog management to member services, we've got everything covered.
               </p>
-              <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-3 sm:space-y-0">
+              <div className="swipe-in-left mt-6 sm:mt-8 flex flex-col sm:flex-row sm:items-center sm:space-x-8 space-y-3 sm:space-y-0" style={{ animationDelay: "0.5s" }}>
                 <div className="flex items-center">
                   <div className="flex">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(4)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-300 fill-current" />
                     ))}
+                    <span className="relative h-4 w-4 sm:h-5 sm:w-5 inline-block">
+                      <Star className="absolute top-0 left-0 h-4 w-4 sm:h-5 sm:w-5 text-white fill-current" />
+                      <Star
+                        className="absolute top-0 left-0 h-4 w-4 sm:h-5 sm:w-5 text-yellow-300 fill-current"
+                        style={{ clipPath: 'inset(0 50% 0 0)' }}
+                      />
+                    </span>
                   </div>
-                  <span className="ml-2 text-sm sm:text-base text-white font-medium">4.9/5 rating</span>
+                  <span className="ml-2 text-sm sm:text-base text-white font-medium">4.5/5 rating</span>
                 </div>
-                <div className="text-sm sm:text-base text-white font-medium">Trusted by 500+ libraries</div>
+                <div className="text-sm sm:text-base text-white font-medium">Trusted by 200+ libraries</div>
               </div>
             </div>
             <div className="relative">
-              <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 transform rotate-1 hover:rotate-0 transition-transform duration-300">
+              <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 transform rotate-2 hover:rotate-0 transition-transform duration-300">
                 <div className="bg-gradient-to-br from-[#D1C4B3A8] to-gray-100 rounded-lg p-4 sm:p-6">
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Library Dashboard</h3>
@@ -112,15 +102,15 @@ export default function Home() {
                   <div className="space-y-3 sm:space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm sm:text-base">Books Available</span>
-                      <span className="font-bold text-green-600 text-lg sm:text-xl">12,450</span>
+                      <span className="font-bold text-green-600 text-lg sm:text-xl">9,450</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm sm:text-base">Active Members</span>
-                      <span className="font-bold text-violet-600 text-lg sm:text-xl">2,834</span>
+                      <span className="font-bold text-violet-600 text-lg sm:text-xl">1,834</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600 text-sm sm:text-base">Books Borrowed</span>
-                      <span className="font-bold text-orange-600 text-lg sm:text-xl">456</span>
+                      <span className="font-bold text-orange-600 text-lg sm:text-xl">156</span>
                     </div>
                     <div className="mt-4 sm:mt-6">
                       <div className="bg-white rounded-lg p-3 sm:p-4">
@@ -245,10 +235,7 @@ export default function Home() {
       <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
         {/* Background with tint */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url('https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
-          }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(./assets/images/Book-ab4.jpg)]"
         >
           <div className="absolute inset-0 bg-amber-100/80"></div>
         </div>
@@ -280,7 +267,7 @@ export default function Home() {
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start mb-6">
                 <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mr-4">
-                  Over 600,000
+                  Over 5,000
                 </h2>
                 <div className="text-4xl sm:text-5xl">🎉</div>
               </div>
@@ -290,7 +277,7 @@ export default function Home() {
               </h3>
 
               <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
-                We're incredibly proud to have helped over 600,000 library professionals and millions of readers
+                We're incredibly proud to have helped over 5,000 library professionals and millions of readers
                 access knowledge more efficiently. From small community libraries to major academic institutions,
                 our platform has transformed how libraries operate and serve their communities.
               </p>
@@ -298,15 +285,15 @@ export default function Home() {
               <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
                   <div>
-                    <div className="text-2xl sm:text-3xl font-bold text-blue-700 mb-2">600K+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">4K+</div>
                     <div className="text-gray-600 font-medium text-sm sm:text-base">Happy Customers</div>
                   </div>
                   <div>
-                    <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">50M+</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">8K+</div>
                     <div className="text-gray-600 font-medium text-sm sm:text-base">Books Accessed</div>
                   </div>
                   <div>
-                    <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">95%</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-orange-600 mb-2">85%</div>
                     <div className="text-gray-600 font-medium text-sm sm:text-base">Satisfaction Rate</div>
                   </div>
                 </div>
@@ -374,7 +361,7 @@ export default function Home() {
       </section>
 
 
-      {/* CTA Section */} 
+      {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#865A20F1] to-gray-500 text-white relative">
         <img src={bookopened} alt="Book left" className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 w-32 sm:w-40 lg:w-48 xl:w-56" style={{ zIndex: 1 }} />
 
@@ -441,39 +428,7 @@ export default function Home() {
                       {member.bio}
                     </p>
                   </div>
-                  {/* Social Links */}
-                  <div className="flex justify-center space-x-3 pt-4 border-t border-gray-200">
-                    {member.social.linkedin && (
-                      <a
-                        href={member.social.linkedin}
-                        className="text-gray-400 hover:text-brown transition-colors duration-200 p-2 hover:bg-blue-50 rounded-full"
-                      >
-                        <Linkedin className="h-4 w-4" />
-                      </a>
-                    )}
-                    {member.social.twitter && (
-                      <a
-                        href={member.social.twitter}
-                        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 p-2 hover:bg-blue-50 rounded-full"
-                      >
-                        <Twitter className="h-4 w-4" />
-                      </a>
-                    )}
-                    {member.social.github && (
-                      <a
-                        href={member.social.github}
-                        className="text-gray-400 hover:text-gray-700 transition-colors duration-200 p-2 hover:bg-gray-50 rounded-full"
-                      >
-                        <Github className="h-4 w-4" />
-                      </a>
-                    )}
-                    <a
-                      href={`mailto:${member.social.email}`}
-                      className="text-gray-400 hover:text-green-600 transition-colors duration-200 p-2 hover:bg-green-50 rounded-full"
-                    >
-                      <Mail className="h-4 w-4" />
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
             ))}
@@ -551,21 +506,24 @@ export default function Home() {
                   <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-[#9C5C09D7] mr-3 sm:mr-4 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-gray-900 text-sm sm:text-base">Email us</div>
-                    <div className="text-gray-600 text-sm sm:text-base">hello@ezlib.com</div>
+                    <div className="text-gray-600 text-sm sm:text-base">
+                      <a href="mailto:freddyflourishk@gmail.com">hello@ezlib.com</a></div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-[#9C5C09D7] mr-3 sm:mr-4 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-gray-900 text-sm sm:text-base">Call us</div>
-                    <div className="text-gray-600 text-sm sm:text-base">+233-30-677-0000</div>
+                    <div className="text-gray-600 text-sm sm:text-base">
+                      <a href="tel:+233553220002" rel="noopener noreferrer">+233-55-322-0002</a></div>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-[#9C5C09D7] mr-3 sm:mr-4 flex-shrink-0" />
                   <div>
                     <div className="font-semibold text-gray-900 text-sm sm:text-base">Visit our website</div>
-                    <div className="text-gray-600 text-sm sm:text-base">www.ezlib.com</div>
+                    <div className="text-gray-600 text-sm sm:text-base">
+                      <a href="https://jocular-khapse-9cdc90.netlify.app/">www.ezlib.com</a></div>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -601,7 +559,7 @@ export default function Home() {
                   <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">Message</label>
                   <textarea rows={4} className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base resize-none"></textarea>
                 </div>
-                <button className="w-full bg-[#9C5C09D7] hover:bg-gray-500 text-white py-2 sm:py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base hover:shadow-lg">
+                <button className="w-full bg-[#2C1C0C] hover:bg-gray-500 text-white py-2 sm:py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base hover:shadow-lg">
                   Send Message
                 </button>
               </form>
