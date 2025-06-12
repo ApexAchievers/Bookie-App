@@ -4,11 +4,11 @@ import { Link } from "react-router"
 export default function BookCard({ book }) {
     return (
 
-        <Link to='/view-book'>
+        <Link to={`/view-book?id=${book.id}`}>
             <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
 
                 <div className="">
-                    <img src={book.image} alt="Born a crime" className="w-full h-96 max-h-83" />
+                    <img src={book.ImageUrl} alt="Born a crime" className="w-full h-96 max-h-83" />
                 </div>
                 <div className="p-4">
                     <h2 className="text-2xl font-bold text-orange-500">{book.Title}</h2>

@@ -43,6 +43,20 @@ export default function Books() {
 
   useEffect(getBooks, []);
 
+  //  const deleteBook = () => {
+  //     apiClient.delete(`//api/v1/books/68488ae08a88b225c466a15f${book.id}`)
+  //       .then((response) => {
+  //         console.log(response);
+  
+  //         location.reload();
+  //       })
+  //       .catch((error) => {
+  //         console.log(error);
+  //       })
+  // onClick={deleteBook}
+  //   }
+  
+
 
   return (
     <>

@@ -1,6 +1,30 @@
-import BornaCrime from '../assets/images/BornaCrime.jpg';
+
+import { apiClient } from '../api/client';
+import { useSearchParams } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
 export default function ViewBook() {
+
+  const [SearchParams] = useSearchParams();
+  const id = SearchParams.get('id');
+
+  const [book, setBook] = useState({});
+
+  const getBook = () => {
+    apiClient.get(`/api/v1/books/${id}`)
+      .then((response) => {
+        console.log(response.data);
+        setBook((response.data));
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
+  useEffect(getBook, []);
+
+
   return (
     <section>
       <h1 className='text-4xl text-center font-bold'>Viewbook</h1>
@@ -8,7 +32,7 @@ export default function ViewBook() {
       <div className='max-w-2xl mx-auto p-6 bg-white rounded-lg'>
 
         <div className='flex flex-row justify-center'>
-          <img src={BornaCrime} alt="Single Book" />
+          <img src={book.ImageUrl} alt="Single Book" />
         </div>
         <p>
           <span className='text-3xl text-center'>Synopsis</span> <br />
@@ -20,8 +44,11 @@ export default function ViewBook() {
         </p>
 
         <div>
-          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center'>Edit</button>
-          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center'>Delete</button>
+          <Link to={`/edit-book`}>
+          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center mb-4 mt-2 cursor-pointer'>Edit</button>
+          </Link>
+          
+          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center cursor-pointer'>Delete</button>
         </div>
 
 
