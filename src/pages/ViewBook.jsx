@@ -21,7 +21,7 @@ export default function ViewBook() {
 
         <div>
           <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center'>Edit</button>
-          <button>Delete</button>
+          <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center'>Delete</button>
         </div>
 
 
