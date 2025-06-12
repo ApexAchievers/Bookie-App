@@ -15,7 +15,7 @@ export default function Navbar() {
                     <li><Link to="/" className="hover:underline">Dashboard</Link></li>
                     <li><Link to="/books" className="hover:underline">Books</Link></li>
                     <li><Link to="/add-book" className="hover:underline">Add Book</Link></li>
-                    <li><Link to="//view-book" className="hover:underline">View Book</Link></li>
+                    <li><Link to="/view-book" className="hover:underline">View Book</Link></li>
                     {/* <li><Link to="/edit-book" className="hover:underline">Edit Book</Link></li> */}
                 </ul>
                 <button className="cursor-pointer border py-4 px-4 bg-brown text-white rounded-full font-bold text-xs ">
@@ -23,5 +23,5 @@ export default function Navbar() {
                 </button>
             </div>
         </nav>
-    );
+    ); 
 }
