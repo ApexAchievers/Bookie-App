@@ -44,7 +44,7 @@ export default function ViewBook() {
         </p>
 
         <div>
-          <Link to={`/edit-book`}>
+          <Link to={`/edit-book?id=${id}`}>
           <button className='bg-orange-400 px-6 rounded-lg flex flex-row justify-center items-center mb-4 mt-2 cursor-pointer'>Edit</button>
           </Link>
           
