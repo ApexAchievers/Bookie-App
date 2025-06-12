@@ -31,7 +31,7 @@ const EditBook = () => {
                 </label>
                 <input
                   type="text"
-                  id="title"
+                  name="Title"
                   placeholder="Enter book title"
                   required
                   className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 "
@@ -47,7 +47,7 @@ const EditBook = () => {
                 </label>
                 <input
                   type="text"
-                  id="author"
+                  name="Author"
                   placeholder="Enter author's name"
                   required
                   className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2"
@@ -56,14 +56,14 @@ const EditBook = () => {
 
               <div className="flex flex-col w-full">
                 <label
-                  htmlFor="publicationYear"
+                  htmlFor="yearPublished"
                   className="text-md font-semibold text-gray-800 mb-1"
                 >
                   Year of Publication
                 </label>
                 <input
                   type="number"
-                  id="publicationYear"
+                  name="yearPublished"
                   placeholder="e.g., 2023"
                   required
                   className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2"
@@ -72,28 +72,27 @@ const EditBook = () => {
 
               <div className="flex flex-col w-full">
                 <label
-                  htmlFor="genre"
+                  htmlFor="category"
                   className="text-md font-semibold text-gray-800 mb-1"
                 >
                   Category
                 </label>
                 <select
-                  name="genre"
-                  id="genre"
+                  name="Category"
                   required
                   className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2"
                 >
                   <option value="">Select a category</option>
-                  <option value="fiction">Fiction</option>
-                  <option value="non-fiction">Non-Fiction</option>
-                  <option value="science-fiction">Science Fiction</option>
-                  <option value="fantasy">Fantasy</option>
-                  <option value="mystery">Mystery</option>
+                  <option value="Fiction">Fiction</option>
+                  <option value="Non-fiction">Non-Fiction</option>
+                  <option value="Science-fiction">Science Fiction</option>
+                  <option value="Fantasy">Fantasy</option>
+                  <option value="Mystery">Mystery</option>
                   <option value="thriller">Thriller</option>
-                  <option value="biography">Biography</option>
-                  <option value="history">History</option>
-                  <option value="children">Children's</option>
-                  <option value="other">Other</option>
+                  <option value="Biogragphy">Biogragphy</option>
+                  <option value="History">History</option>
+                  <option value="Children">Children's</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -106,7 +105,7 @@ const EditBook = () => {
                 </label>
                 <input
                   type="text"
-                  id="description"
+                  name="Description"
                   placeholder="Brief summary or notes"
                   required
                   className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-2 "

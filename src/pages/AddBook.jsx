@@ -1,104 +1,153 @@
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { apiClient } from "../api/client";
 
 const AddBook = () => {
+  const postBook = (event) => {
+    event.preventDefault();
+
+    // collect form input
+    const data = new FormData(event.target);
+
+    // Post Data To Api
+    apiClient
+      .post("/api/v1/books", data, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Navbar */}
       <Navbar />
 
       {/* Main Content */}
-      <main className="flex-grow bg-[url('./assets/images/Book-ab5.jpg')] bg-cover bg-no-repeat bg-[center_20px] pt-16 pb-28 px-6">
+      <main className="flex-grow bg-[url('./assets/images/Book-ab6.jpg')] bg-cover bg-no-repeat bg-[center_10px] pt-16 pb-20 px-6">
         <div className="max-w-7xl mx-auto px-20 py-6 flex flex-col-reverse md:flex-row items-center justify-between gap-12 rounded-xl">
-
           {/* Heading Section - Right with Animation */}
           <div className="text-center md:text-right w-full md:w-1/2">
             {/* Main Heading with Staggered Animation */}
             <div className="overflow-hidden">
-              <h1 className="text-5xl font-extrabold text-[#a05959] drop-shadow-md mb-6 leading-tight">
-                <span className="inline-block animate-[slideInUp_0.8s_ease-out_0.2s_both]">
+              <h1 className="text-5xl font-extrabold text-white drop-shadow-md mb-6 leading-tight">
+                <span className="inline-block animate-[slideInUp_0.8s_ease-out_0.2s_both] place-content-center">
                   Organize
                 </span>
                 <br />
                 <span className="inline-block animate-[slideInUp_0.8s_ease-out_0.4s_both]">
-                  Your Library
+                  Library To Your Preference
                 </span>
               </h1>
             </div>
           </div>
 
           {/* Form Section - Left */}
-          <form className="flex flex-col gap-6 w-full md:w-1/2 p-6 bg-brown rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold text-gray-800 mb-2">Add a New Book</h2>
+          <form
+            onSubmit={postBook}
+            className="flex flex-col gap-6 w-full md:w-1/2 p-6 bg-white rounded-lg shadow-md"
+          >
+            <h2 className="text-2xl font-bold text-brown mb-2">
+              Add a New Book
+            </h2>
 
             {/* Title */}
             <div className="flex flex-col">
-              <label htmlFor="title" className="text-sm font-semibold text-black mb-1">Title</label>
+              <label
+                htmlFor="title"
+                className="text-sm font-semibold text-black mb-1"
+              >
+                Title
+              </label>
               <input
                 type="text"
-                id="title"
+                name="Title"
                 required
                 placeholder="e.g., The Great Gatsby"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
             {/* Author */}
             <div className="flex flex-col">
-              <label htmlFor="author" className="text-sm font-semibold text-black mb-1">Author</label>
+              <label
+                htmlFor="author"
+                className="text-sm font-semibold text-black mb-1"
+              >
+                Author
+              </label>
               <input
                 type="text"
-                id="author"
+                name="Author"
                 required
                 placeholder="e.g., F. Scott Fitzgerald"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
             {/* Year */}
             <div className="flex flex-col">
-              <label htmlFor="publicationYear" className="text-sm font-semibold text-black mb-1">Year of Publication</label>
+              <label
+                htmlFor="publicationYear"
+                className="text-sm font-semibold text-black mb-1"
+              >
+                Year of Publication
+              </label>
               <input
                 type="number"
-                id="publicationYear"
+                name="yearPublished"
                 required
                 placeholder="e.g., 1925"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
-            {/* Genre */}
+            {/* Category */}
             <div className="flex flex-col">
-              <label htmlFor="genre" className="text-sm font-semibold text-black mb-1">Category</label>
+              <label
+                htmlFor="category"
+                className="text-sm font-semibold text-black mb-1"
+              >
+                Category
+              </label>
               <select
-                name="genre"
-                id="genre"
+                name="Category"
                 required
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               >
                 <option value="">Select a category</option>
-                <option value="fiction">Fiction</option>
-                <option value="non-fiction">Non-Fiction</option>
-                <option value="science-fiction">Science Fiction</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="mystery">Mystery</option>
-                <option value="thriller">Thriller</option>
-                <option value="biography">Biography</option>
-                <option value="history">History</option>
-                <option value="children">Children's</option>
-                <option value="other">Other</option>
+                <option value="Fiction">Fiction</option>
+                <option value="Non-fiction">Non-Fiction</option>
+                <option value="Science-fiction">Science Fiction</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Biogragphy">Biogragphy</option>
+                <option value="History">History</option>
+                <option value="Children">Children's</option>
+                <option value="Other">Other</option>
               </select>
             </div>
 
             {/* Description */}
             <div className="flex flex-col">
-              <label htmlFor="description" className="text-sm font-semibold text-black mb-1">Description</label>
+              <label
+                htmlFor="description"
+                className="text-sm font-semibold text-black mb-1"
+              >
+                Description
+              </label>
               <input
                 type="text"
-                id="description"
+                name="Description"
                 required
                 placeholder="Brief summary of the book"
-                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
               />
             </div>
 
@@ -112,8 +161,6 @@ const AddBook = () => {
           </form>
         </div>
       </main>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
