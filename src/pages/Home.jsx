@@ -1,22 +1,90 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Star, BarChart3, BookOpen, Users, Shield, CheckCircle, Search, Smile, ArrowRight, Mail, Phone, Globe, Award } from "lucide-react";
+import { Star, BarChart3, BookOpen, Users, Shield, CheckCircle, Search, Smile, ArrowRight, Linkedin, Twitter, Github, Mail, Phone, Globe, Award } from "lucide-react";
+import bookopened from "../assets/images/bookopened.PNG"
+import bookstack from "../assets/images/bookstack.PNG"
+import google from "../assets/images/Google.png"
+import harvard from "../assets/images/harvard.PNG"
+import cambridge from "../assets/images/cambridge.PNG"
+import unesco from "../assets/images/unesco.PNG"
+import nickelodeon from "../assets/images/nickelodeon.PNG"
+import disney from "../assets/images/disney.PNG"
 
 
-export default function Home(){
-    return(
-        <>
-        <Navbar />
-        {/* Hero Section */}
+export default function Home() {
+
+  // Team members data
+  const teamMembers = [
+    {
+      name: "Sarah Johnson",
+      role: "Chief Executive Officer",
+      bio: "Visionary leader with 15+ years in library technology and digital transformation.",
+      image: "",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        email: "sarah@librarypro.com"
+      }
+    },
+    {
+      name: "Michael Chen",
+      role: "Chief Technology Officer",
+      bio: "Full-stack architect passionate about building scalable library management solutions.",
+      image: "",
+      social: {
+        linkedin: "#",
+        github: "#",
+        email: "michael@librarypro.com"
+      }
+    },
+    {
+      name: "Felicity Bafoaa",
+      role: "Head of Product Design",
+      bio: "UX/UI expert dedicated to creating intuitive and accessible library experiences.",
+      image: "",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        email: "emily@librarypro.com"
+      }
+    },
+    {
+      name: "David Thompson",
+      role: "Library Systems Specialist",
+      bio: "Former head librarian with deep expertise in library operations and workflows.",
+      image: "",
+      social: {
+        linkedin: "#",
+        email: "david@librarypro.com"
+      }
+    },
+    {
+      name: "Comfort Parker",
+      role: "Customer Success Manager",
+      bio: "Dedicated to ensuring every library achieves success with our platform and support.",
+      image: "",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        email: "lisa@librarypro.com"
+      }
+    }
+  ];
+
+  return (
+    <>
+      <Navbar />
+
+      {/* Hero Section */}
       <section className="relative bg-[url(./assets/images/homepage-bgimg.jpg)] bg-cover bg-center py-12 sm:py-16 lg:py-20 xl:py-24">
-        <div className="absolute inset-0 bg-black/50 z-0"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-8 xl:gap-12 items-center">
             <div className="mb-10 lg:mb-0">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                EZLib Library
-                <span className="block text-[#DF912CF1]">Management</span>
-                <span className="block">Made Simple</span>
+                Easy and Effective
+                <span className="block">Library Management</span>
+                <span className="block text-[#DF912CF1]">with EZLib</span>
               </h1>
               <p className="font-medium mt-4 sm:mt-6 text-lg sm:text-xl text-white leading-relaxed max-w-2xl">
                 Track, organize and manage your books with our comprehensive management system.
@@ -173,28 +241,145 @@ export default function Home(){
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 sm:py-16 bg-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
-            {[
-              { number: "500+", label: "Libraries Served" },
-              { number: "2M+", label: "Books Managed" },
-              { number: "99.9%", label: "Uptime" },
-              { number: "24/7", label: "Support" }
-            ].map((stat, index) => (
-              <div key={index} className="p-4">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#9C5C09D7] mb-2">{stat.number}</div>
-                <div className="text-gray-600 text-sm sm:text-base font-medium">{stat.label}</div>
+      {/* Customer Celebration Section */}
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+        {/* Background with tint */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('https://images.pexels.com/photos/1370298/pexels-photo-1370298.jpeg?auto=compress&cs=tinysrgb&w=1600')`,
+          }}
+        >
+          <div className="absolute inset-0 bg-amber-100/80"></div>
+        </div>
+
+        {/* Happy cartoon character */}
+        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+          <div className="w-64 h-64 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full flex items-center justify-center shadow-2xl">
+            <div className="text-center">
+              {/* Simple cartoon face */}
+              <div className="w-32 h-32 bg-yellow-300 rounded-full mx-auto mb-4 relative">
+                {/* Eyes */}
+                <div className="absolute top-8 left-6 w-4 h-4 bg-black rounded-full"></div>
+                <div className="absolute top-8 right-6 w-4 h-4 bg-black rounded-full"></div>
+                {/* Smile */}
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-6 border-b-4 border-black rounded-full"></div>
               </div>
-            ))}
+              {/* Books in hands */}
+              <div className="flex justify-center space-x-2">
+                <div className="w-6 h-8 bg-blue-500 rounded transform -rotate-12"></div>
+                <div className="w-6 h-8 bg-red-500 rounded transform rotate-12"></div>
+                <div className="w-6 h-8 bg-green-500 rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="lg:max-w-2xl">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start mb-6">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mr-4">
+                  Over 600,000
+                </h2>
+                <div className="text-4xl sm:text-5xl">🎉</div>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Customers Served Worldwide!
+              </h3>
+
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
+                We're incredibly proud to have helped over 600,000 library professionals and millions of readers
+                access knowledge more efficiently. From small community libraries to major academic institutions,
+                our platform has transformed how libraries operate and serve their communities.
+              </p>
+
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 shadow-xl">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-700 mb-2">600K+</div>
+                    <div className="text-gray-600 font-medium text-sm sm:text-base">Happy Customers</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-green-600 mb-2">50M+</div>
+                    <div className="text-gray-600 font-medium text-sm sm:text-base">Books Accessed</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl sm:text-3xl font-bold text-purple-600 mb-2">95%</div>
+                    <div className="text-gray-600 font-medium text-sm sm:text-base">Satisfaction Rate</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#reviews">
+                  <button className="border-2 border-gray-700 text-gray-700 hover:bg-gray-500 hover:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200">
+                    Read Success Stories
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews Section */}
+      <section id="reviews" className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+              Real stories from libraries and librarians who love EZLib.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Review 1 */}
+            <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+              <div className="mb-4">
+                <Smile className="h-8 w-8 text-yellow-400 mx-auto" />
+              </div>
+              <blockquote className="italic text-gray-700 mb-4">
+                "EZLib has made our daily operations so much easier. Our members love the new system and our staff is more productive than ever!"
+              </blockquote>
+              <div className="font-semibold text-gray-900">Kwame Mensah</div>
+              <div className="text-gray-500 text-sm">Librarian, Kumasi Public Library</div>
+            </div>
+            {/* Review 2 */}
+            <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+              <div className="mb-4">
+                <Star className="h-8 w-8 text-yellow-400 mx-auto" />
+              </div>
+              <blockquote className="italic text-gray-700 mb-4">
+                "The analytics and reporting features are a game changer. We can now track our most popular books and improve our collection."
+              </blockquote>
+              <div className="font-semibold text-gray-900">Linda Owusu</div>
+              <div className="text-gray-500 text-sm">Head Librarian, Cape Coast University</div>
+            </div>
+            {/* Review 3 */}
+            <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+              <div className="mb-4">
+                <CheckCircle className="h-8 w-8 text-green-400 mx-auto" />
+              </div>
+              <blockquote className="italic text-gray-700 mb-4">
+                "We’ve seen a 40% increase in member satisfaction since switching to EZLib. Highly recommended for any library!"
+              </blockquote>
+              <div className="font-semibold text-gray-900">Aisha Sule</div>
+              <div className="text-gray-500 text-sm">Community Librarian, Tamale</div>
+            </div>
           </div>
         </div>
       </section>
 
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#865A20F1] to-gray-500 text-white">
+      {/* CTA Section */} 
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#865A20F1] to-gray-500 text-white relative">
+        <img src={bookopened} alt="Book left" className="hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 w-32 sm:w-40 lg:w-48 xl:w-56" style={{ zIndex: 1 }} />
+
+        <img src={bookstack} alt="Book right" className="hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 w-32 sm:w-40 lg:w-48 xl:w-56" style={{ zIndex: 1 }} />
+
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
             Ready to Transform Your Library?
@@ -207,14 +392,151 @@ export default function Home(){
               Get Started
               <ArrowRight className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
             </button>
-            
+
           </div>
         </div>
       </section>
 
+      {/* Team Section */}
+      <section id="team" className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Meet Our Expert Team
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Passionate professionals dedicated to revolutionizing library management and empowering communities through technology.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="group">
+                <div className="bg-primary rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                  {/* Profile Image */}
+                  <div className="relative mb-6">
+                    <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-[#D1C4B3A8] transition-all duration-300">
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
+                      <div className="bg-brown text-white p-2 rounded-full shadow-lg group-hover:bg-brown transition-colors duration-300">
+                        <Users className="h-4 w-4" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Member Info */}
+                  <div className="mb-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 group-hover:text-brown transition-colors duration-300">
+                      {member.name}
+                    </h3>
+                    <p className="text-brown font-semibold text-sm sm:text-base mb-3">
+                      {member.role}
+                    </p>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
+                  {/* Social Links */}
+                  <div className="flex justify-center space-x-3 pt-4 border-t border-gray-200">
+                    {member.social.linkedin && (
+                      <a
+                        href={member.social.linkedin}
+                        className="text-gray-400 hover:text-brown transition-colors duration-200 p-2 hover:bg-blue-50 rounded-full"
+                      >
+                        <Linkedin className="h-4 w-4" />
+                      </a>
+                    )}
+                    {member.social.twitter && (
+                      <a
+                        href={member.social.twitter}
+                        className="text-gray-400 hover:text-blue-400 transition-colors duration-200 p-2 hover:bg-blue-50 rounded-full"
+                      >
+                        <Twitter className="h-4 w-4" />
+                      </a>
+                    )}
+                    {member.social.github && (
+                      <a
+                        href={member.social.github}
+                        className="text-gray-400 hover:text-gray-700 transition-colors duration-200 p-2 hover:bg-gray-50 rounded-full"
+                      >
+                        <Github className="h-4 w-4" />
+                      </a>
+                    )}
+                    <a
+                      href={`mailto:${member.social.email}`}
+                      className="text-gray-400 hover:text-green-600 transition-colors duration-200 p-2 hover:bg-green-50 rounded-full"
+                    >
+                      <Mail className="h-4 w-4" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-300">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              Trusted by Leading Brands & Universities
+            </h2>
+            <p className="text-lg text-gray-700">
+              Libraries and organizations around the world rely on EZLib
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-10">
+            <img
+              src={google}
+              alt="Google"
+              className="h-20"
+              style={{ background: "transparent" }}
+            />
+            <img
+              src={harvard}
+              alt="Harvard University"
+              className="h-20"
+              style={{ background: "transparent" }}
+            />
+            <img
+              src={unesco}
+              alt="UNESCO"
+              className="h-20"
+              style={{ background: "transparent" }}
+            />
+            <img
+              src={cambridge}
+              alt="Cambridge University"
+              className="h-30"
+              style={{ background: "transparent" }}
+            />
+            <img
+              src={disney}
+              alt="Disney"
+              className="h-20"
+              style={{ background: "transparent" }}
+            />
+            <img
+              src={nickelodeon}
+              alt="Nickelodeon"
+              className="h-20"
+              style={{ background: "transparent" }}
+            />
+          </div>
+        </div>
+      </section>
+
+
       {/* Contact Section */}
       <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gray-50">
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16">
             <div className="mb-10 lg:mb-0">
@@ -287,7 +609,7 @@ export default function Home(){
           </div>
         </div>
       </section>
-        <Footer />
-        </>
-    );
+      <Footer />
+    </>
+  );
 }
