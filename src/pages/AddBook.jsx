@@ -1,27 +1,28 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { apiClient } from "../api/client";
+import SubmitButton from "../components/SubmitButton";
+import { useNavigate } from "react-router";
 
 const AddBook = () => {
-  const postBook = (event) => {
-    event.preventDefault();
 
-    // collect form input
-    const data = new FormData(event.target);
+  const navigate = useNavigate();
 
+  const postBook = async (data) => {
     // Post Data To Api
-    apiClient
-      .post("/api/v1/books", data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+   try {
+      const response = await apiClient
+        .post("/api/v1/books", data, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      console.log(response);
+      navigate('/books');
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -50,7 +51,7 @@ const AddBook = () => {
 
       {/* Form Section */}
       <form
-        onSubmit={postBook}
+        action={postBook}
         className="order-2 md:order-2 flex flex-col gap-6 w-full md:w-1/2 p-6 bg-white rounded-lg  mt-10 ">
 
         {/* Title */}
@@ -148,12 +149,10 @@ const AddBook = () => {
         </div>
 
         {/* Submit Button */}
-        <button
-          type="submit"
-          className="mt-4 p-3 bg-primary text-black font-semibold rounded-md hover:bg-secondary transition duration-300"
-        >
-          Add Book
-        </button>
+        <SubmitButton 
+          title={"Add"}
+          className="w-full sm:w-auto px-10 py-2 bg-[#2C1C0C] text-white font-semibold rounded-md hover:bg-gray-600 transition duration-300"
+        />
       </form>
     </div>
   </main>

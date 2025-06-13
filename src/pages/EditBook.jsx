@@ -1,10 +1,13 @@
 import { apiClient } from "../api/client";
-import { useSearchParams } from "react-router";
+import { useSearchParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SubmitButton from "../components/SubmitButton";
 
 const EditBook = () => {
+  const navigate = useNavigate();
+
   const [SearchParams] = useSearchParams();
   const id = SearchParams.get("id");
 
@@ -24,25 +27,21 @@ const EditBook = () => {
 
   useEffect(getBook, []);
 
-  const putBook = (event) => {
-    event.preventDefault();
-
-    // collect form input
-    const data = new FormData(event.target);
-
+  const putBook = async (data) => {
     // Post Data To Api
-    apiClient
-      .put(`/api/v1/books/${id}`, data, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+   try {
+      const response = await apiClient
+        .put(`/api/v1/books/${id}`, data, {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      console.log(response);
+      navigate(-1);
+
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -66,7 +65,7 @@ const EditBook = () => {
             </div>
 
             {/* Right Side - Form */}
-            <form onSubmit={putBook} className="w-full md:w-1/2 flex flex-wrap gap-4 justify-start items-start bg-[#ddd9d7] rounded-xl px-4 py-6 mt-5">
+            <form action={putBook} className="w-full md:w-1/2 flex flex-wrap gap-4 justify-start items-start bg-[#ddd9d7] rounded-xl px-4 py-6 mt-5">
               {/* Title */}
               <div className="flex flex-col w-full">
                 <label
@@ -186,12 +185,10 @@ const EditBook = () => {
 
               {/* Submit Button */}
               <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto px-10 py-2 bg-[#2C1C0C] text-white font-semibold rounded-md hover:bg-gray-600 transition duration-300"
-                >
-                  Save
-                </button>
+                <SubmitButton
+                title={"Update"}
+                className="w-full sm:w-auto px-10 py-2 bg-[#2C1C0C] text-white font-semibold rounded>-md hover:bg-gray-600 transition duration-300"
+                />
               </div>
             </form>
           </div>
