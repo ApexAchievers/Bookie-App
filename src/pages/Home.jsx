@@ -10,6 +10,9 @@ import cambridge from "../assets/images/cambridge.PNG"
 import unesco from "../assets/images/unesco.PNG"
 import nickelodeon from "../assets/images/nickelodeon.PNG"
 import disney from "../assets/images/disney.PNG"
+import feliimg from "../assets/images/feli.JPG"
+import jerushaimg from "../assets/images/jerusha.jpg"
+import stellaimg from "../assets/images/stella.jpg"
 
 
 export default function Home() {
@@ -20,36 +23,36 @@ export default function Home() {
       name: "Jerusha",
       role: "Chief Executive Officer",
       bio: "Visionary leader with 5+ years in library technology and digital transformation.",
-      image: "",
-      
+      image: jerushaimg
+
     },
     {
       name: "Prince",
       role: "Chief Technology Officer",
       bio: "Passionate about building scalable library management in the system.",
       image: "",
-      
+
     },
     {
       name: "Felicity",
       role: "Head of Product Design",
       bio: "UX/UI expert dedicated to creating intuitive and accessible library experiences.",
-      image: "",
-      
+      image: feliimg
+
     },
     {
       name: "Stella",
       role: "User Experience & Access Strategist",
       bio: "Focuses on the navigation flow to make our system easy to use.",
-      image: "",
-      
+      image: stellaimg
+
     },
     {
       name: "Comfort",
       role: "Back-End Systems Architect",
       bio: "Dedicated to backend services, including API logic for borrowing, returning and storing records.",
       image: "",
-      
+
     }
   ];
 
@@ -135,7 +138,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Powerful Features for Modern Libraries
+              Our Powerful Features
             </h2>
             <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to run an efficient library, from small community centers to large academic institutions.
@@ -188,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Section */}
-      <section id="benefits" className="py-16 sm:py-20 lg:py-24 bg-[#9C5C09D7] text-white">
+      <section id="benefits" className="py-16 sm:py-20 lg:py-24 bg-[#9e651bd7] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-12 xl:gap-16 items-center">
             <div className="mb-10 lg:mb-0">
@@ -233,26 +236,25 @@ export default function Home() {
 
       {/* Customer Celebration Section */}
       <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-        {/* Background with tint */}
+
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-[url(./assets/images/Book-ab4.jpg)]"
         >
           <div className="absolute inset-0 bg-amber-100/80"></div>
         </div>
 
-        {/* Happy cartoon character */}
-        <div className="absolute right-8 top-1/2 transform -translate-y-1/2 hidden lg:block">
+        <div className="absolute right-16 top-1/2 transform -translate-y-1/2 hidden lg:block">
           <div className="w-64 h-64 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-full flex items-center justify-center shadow-2xl">
             <div className="text-center">
-              {/* Simple cartoon face */}
-              <div className="w-32 h-32 bg-yellow-300 rounded-full mx-auto mb-4 relative">
-                {/* Eyes */}
+
+              <div className="w-32 h-32 bg-[#f8a941d7] rounded-full mx-auto mb-4 relative">
+
                 <div className="absolute top-8 left-6 w-4 h-4 bg-black rounded-full"></div>
                 <div className="absolute top-8 right-6 w-4 h-4 bg-black rounded-full"></div>
-                {/* Smile */}
+
                 <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-6 border-b-4 border-black rounded-full"></div>
               </div>
-              {/* Books in hands */}
+
               <div className="flex justify-center space-x-2">
                 <div className="w-6 h-8 bg-blue-500 rounded transform -rotate-12"></div>
                 <div className="w-6 h-8 bg-red-500 rounded transform rotate-12"></div>
@@ -323,7 +325,7 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Review 1 */}
+
             <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
               <div className="mb-4">
                 <Smile className="h-8 w-8 text-yellow-400 mx-auto" />
@@ -334,7 +336,7 @@ export default function Home() {
               <div className="font-semibold text-gray-900">Kwame Mensah</div>
               <div className="text-gray-500 text-sm">Librarian, Kumasi Public Library</div>
             </div>
-            {/* Review 2 */}
+
             <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
               <div className="mb-4">
                 <Star className="h-8 w-8 text-yellow-400 mx-auto" />
@@ -345,7 +347,7 @@ export default function Home() {
               <div className="font-semibold text-gray-900">Linda Owusu</div>
               <div className="text-gray-500 text-sm">Head Librarian, Cape Coast University</div>
             </div>
-            {/* Review 3 */}
+
             <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
               <div className="mb-4">
                 <CheckCircle className="h-8 w-8 text-green-400 mx-auto" />
@@ -377,7 +379,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button className="bg-white text-[#9C5C09D7] hover:bg-white/70 border-2 border-[#9C5C09D7] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200 flex items-center justify-center hover:shadow-lg">
               Get Started
-              <ArrowRight className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
+              <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" /> 
             </button>
 
           </div>
@@ -400,7 +402,7 @@ export default function Home() {
             {teamMembers.map((member, index) => (
               <div key={index} className="group">
                 <div className="bg-primary rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                  {/* Profile Image */}
+
                   <div className="relative mb-6">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-[#D1C4B3A8] transition-all duration-300">
                       <img
@@ -416,7 +418,7 @@ export default function Home() {
                     </div>
                   </div>
 
-                  {/* Member Info */}
+
                   <div className="mb-4">
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 group-hover:text-brown transition-colors duration-300">
                       {member.name}
@@ -428,7 +430,7 @@ export default function Home() {
                       {member.bio}
                     </p>
                   </div>
-                  
+
                 </div>
               </div>
             ))}
@@ -540,7 +542,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 mb-4 sm:mb-6">
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">First Name</label>
-                    <input type="text" className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
+                    <input type="text" required className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
                   </div>
                   <div>
                     <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">Last Name</label>
@@ -549,17 +551,17 @@ export default function Home() {
                 </div>
                 <div className="mb-4 sm:mb-6">
                   <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">Email</label>
-                  <input type="email" className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
+                  <input type="email" required className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
                 </div>
                 <div className="mb-4 sm:mb-6">
                   <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">Library Name</label>
-                  <input type="text" className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
+                  <input type="text" required className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base" />
                 </div>
                 <div className="mb-4 sm:mb-6">
                   <label className="block text-gray-700 font-semibold mb-2 text-sm sm:text-base">Message</label>
-                  <textarea rows={4} className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base resize-none"></textarea>
+                  <textarea rows={4} required className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-1 focus:border-transparent text-sm sm:text-base resize-none"></textarea>
                 </div>
-                <button className="w-full bg-[#2C1C0C] hover:bg-gray-500 text-white py-2 sm:py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base hover:shadow-lg">
+                <button type="submit" className="w-full bg-[#2C1C0C] hover:bg-gray-500 text-white py-2 sm:py-3 px-6 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base hover:shadow-lg">
                   Send Message
                 </button>
               </form>
