@@ -13,11 +13,12 @@ import disney from "../assets/images/disney.PNG"
 import feliimg from "../assets/images/feli.JPG"
 import jerushaimg from "../assets/images/jerusha.jpg"
 import stellaimg from "../assets/images/stella.jpg"
+import princeimg from "../assets/images/prince.JPG"
 
 
 export default function Home() {
 
-  // Team members data
+
   const teamMembers = [
     {
       name: "Jerusha",
@@ -30,7 +31,7 @@ export default function Home() {
       name: "Prince",
       role: "Chief Technology Officer",
       bio: "Passionate about building scalable library management in the system.",
-      image: "",
+      image: princeimg
 
     },
     {
@@ -224,7 +225,7 @@ export default function Home() {
                     <Users className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
                   <div>
-                    <div className="font-semibold text-sm sm:text-base">Felicity Bafoaa</div>
+                    <div className="font-semibold text-sm sm:text-base">Doris K. Dzansi</div>
                     <div className="text-white/80 text-xs sm:text-sm">Head Librarian, Accra City Library</div>
                   </div>
                 </div>
@@ -252,7 +253,7 @@ export default function Home() {
                 <div className="absolute top-8 left-6 w-4 h-4 bg-black rounded-full"></div>
                 <div className="absolute top-8 right-6 w-4 h-4 bg-black rounded-full"></div>
 
-                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-6 border-b-4 border-black rounded-full"></div>
+                <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-12 h-6 border-b-6 border-black rounded-full"></div>
               </div>
 
               <div className="flex justify-center space-x-2">
@@ -339,7 +340,7 @@ export default function Home() {
 
             <div className="bg-gray-200 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
               <div className="mb-4">
-                <Star className="h-8 w-8 text-yellow-400 mx-auto" />
+                <Star className="h-8 w-8 text-indigo-600 mx-auto" />
               </div>
               <blockquote className="italic text-gray-700 mb-4">
                 "The analytics and reporting features are a game changer. We can now track our most popular books and improve our collection."
@@ -377,10 +378,12 @@ export default function Home() {
             Join hundreds of libraries already using EZLib to improve their operations and serve their communities better.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <button className="bg-white text-[#9C5C09D7] hover:bg-white/70 border-2 border-[#9C5C09D7] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200 flex items-center justify-center hover:shadow-lg">
-              Get Started
-              <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" /> 
-            </button>
+            <Link to="/sign-up" onClick={() => setMenuOpen(false)}>
+              <button className="bg-white text-[#9C5C09D7] hover:bg-white/10 hover:text-white hover:border-white backdrop-blur-sm border-2 border-[#9C5C09D7] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-200 flex items-center justify-center hover:shadow-lg">
+                Get Started
+                <ArrowRight className="ml-3 h-4 w-4 sm:h-5 sm:w-5" />
+              </button>
+            </Link>
 
           </div>
         </div>
