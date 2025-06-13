@@ -61,27 +61,30 @@ export default function Books() {
 
   return (
     <>
-      <section className='bg-gray-200 bg-[url(https://i.pinimg.com/736x/cb/da/dc/cbdadc2b4887666906e3279c1189e4de.jpg)] px-4 sm:px-8'>
+    <Navbar />
+      <section className='bg-gray-400 px-4 sm:px-8'>
 
-        <Navbar />
+        
 
-        <div className='pb-4'>
-          <div className='flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mt-21 mb-8 w-full'>
-            <input
+        <div className='pb-4 pt-5'>
+          <div className='flex sm:flex-row items-center sm:items-center justify-center mt-21 mb-8'>
+            <input 
               type="text"
               placeholder="Search by title, year, author"
               name="searchbar"
-              className="border-2 border-secondary px-4 py-2 rounded-md w-full sm:w-[300px] focus:outline-none focus:ring-2 focus:ring-amber-400"
+              className="border-2 items-center bg-white border-secondary px-4 py-2 rounded-md w-full sm:w-[300px] focus:outline-none focus:ring-2 focus:ring-amber-400"
             />
-            <button className="bg-amber-600 text-white px-6 py-2 rounded-md w-full sm:w-auto hover:bg-amber-700">
+            {/* <button className="bg-amber-10 text-white px-6 py-2 rounded-md w-full sm:w-auto hover:bg-amber-700">
               Search
-            </button>
+            </button> */}
           </div>
 
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
-            {books.map(book => (
-              <BookCard key={book.id} book={book} />
-            ))}
+          <div className='container mx-auto px-4'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5'>
+              {books.map(book => (
+                <BookCard key={book.id} book={book} />
+              ))}
+            </div>
           </div>
 
           <div className="flex flex-wrap justify-center items-center gap-2 mt-6 mb-8">
@@ -94,12 +97,8 @@ export default function Books() {
             <button className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 text-gray-700">Next</button>
           </div>
         </div>
-
-        <Footer />
-
       </section>
-
-
+      <Footer />
     </>
 
 
