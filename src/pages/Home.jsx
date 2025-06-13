@@ -441,57 +441,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-300">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
-              Trusted by Leading Brands & Universities
-            </h2>
-            <p className="text-lg text-gray-700">
-              Libraries and organizations around the world rely on EZLib
-            </p>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-10">
-            <img
-              src={google}
-              alt="Google"
-              className="h-20"
-              style={{ background: "transparent" }}
-            />
-            <img
-              src={harvard}
-              alt="Harvard University"
-              className="h-20"
-              style={{ background: "transparent" }}
-            />
-            <img
-              src={unesco}
-              alt="UNESCO"
-              className="h-20"
-              style={{ background: "transparent" }}
-            />
-            <img
-              src={cambridge}
-              alt="Cambridge University"
-              className="h-30"
-              style={{ background: "transparent" }}
-            />
-            <img
-              src={disney}
-              alt="Disney"
-              className="h-20"
-              style={{ background: "transparent" }}
-            />
-            <img
-              src={nickelodeon}
-              alt="Nickelodeon"
-              className="h-20"
-              style={{ background: "transparent" }}
-            />
-          </div>
-        </div>
-      </section>
+
 
 
       {/* Contact Section */}
