@@ -44,7 +44,7 @@ export default function Home() {
     {
       name: "Stella",
       role: "User Experience & Access Strategist",
-      bio: "Focuses on the navigation flow to make our system easy to use.",
+      bio: "Highlights the user-friendly nature of our system, giving libraries confidence in their management.",
       image: stellaimg
 
     },
@@ -404,7 +404,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="group">
-                <div className="bg-primary rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="bg-primary rounded-2xl p-6 sm:p-8 text-center hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-96 flex flex-col">
 
                   <div className="relative mb-6">
                     <div className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-[#D1C4B3A8] transition-all duration-300">
