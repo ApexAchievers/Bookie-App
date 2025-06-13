@@ -22,11 +22,11 @@ export default function Navbar() {
                     <li><Link to="/add-book" className="hover:underline">Add Book</Link></li>
                     {/* <li><Link to="/view-book" className="hover:underline">View Book</Link></li> */}
                 </ul>
-                <Link to="/sign-up" onClick={() => setMenuOpen(false)}>
+                {/* <Link to="/sign-up" onClick={() => setMenuOpen(false)}> */}
                     <button className="cursor-pointer border py-2 px-4 bg-brown text-white rounded-md font-bold text-xs">
                         Get Started
                     </button>
-                </Link>
+                {/* </Link> */}
 
             </div>
 
