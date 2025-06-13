@@ -1,28 +1,49 @@
-import { Link } from "react-router"
+import { Link } from "react-router";
+import { BookOpen, BookOpenCheck, PenLine, BadgeInfo, CalendarDays, Captions, Eye } from "lucide-react";
 
 
 export default function BookCard({ book }) {
     return (
 
-        <Link to={`/view-book?id=${book.id}`}>
-            <div className="max-w-sm mt-12  rounded-lg shadow-lg overflow-hidden w-full h-150">
 
-                <div className="">
-                    <img src={book.ImageUrl} alt="Born a crime" className="w-full h-auto max-h-83" />
-                </div>
 
-                <div>
-                    <h2 className="text-2xl font-bold text-brown">{book.Title}</h2>
-                    <p className="text-sm font-bold text-gray-500 italic">{book.Author}</p>
-                    <p><h3 className="text-lg font-semibold text-secondary">{book.Description}</h3></p>
-                    <p className=" mt-1">{book.yearPublished}</p>
-                    <p className="text-green-600 font-bold mt-2">{book.Category}</p>
-                </div>
-
+        <div className="rounded-md shadow-lg w-full bg-gray-100 p-6 space-y- overflow-hidden h-[400px]">
+            <div>
+                <img src={book.ImageUrl} alt="image cover" className="w-full h-[200px]" />
             </div>
 
+            <h1 className="flex items-center gap-2 font-bold text-amber-700">
+            </h1> {book.Title}
 
-        </Link>
+            {/* Author */}
+            <div className="flex items-center gap-2 text-gray-600 italic font-medium">
+                <BookOpen className="w-4 h-4" /> {book.Author}
+            </div>
+
+            {/* Description */}
+            {/* <div className="flex items-center gap-2 text-gray-400">
+                    <PenLine className="w-4 h-4" /> {book.Description}
+                </div> */}
+
+            <div className="flex items-center gap-2 text-black">
+                <CalendarDays className="w-4 h-4" /> {book.yearPublished}
+            </div>
+
+            <div className="flex items-center gap-2 text-green-600 font-semibold">
+                <BadgeInfo className="w-4 h-4" /> {book.Category}
+            </div>
+
+            <Link to={`/view-book?id=${book.id}`}>
+                <button className=" flex flex-row border px-2 mr- rounded-md bg-gray-200 gap-2 cursor-pointer">
+                    <Eye className="w-4 text-amber-700" />
+                    Viewbook
+                </button>
+            </Link>
+
+        </div>
+
+
 
     );
 }
+
