@@ -48,7 +48,8 @@ const EditBook = () => {
   return (
     <>
       <Navbar />
-      <div className="  min-h-screen pt-16 pb-28 px-6">
+      <div className="  bg-[url('./assets/images/Book-ab14.jpg')] bg-cover bg-no-repeat bg-[center_10px] pt-16 pb-20 px-6">
+      <div className="absolute insert-0 bg-black/50"></div>
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col md:flex-row items-start justify-between rounded-xl p-6 md:p-8 max-w-6xl w-full gap-6">
             {/* Left Side - Heading */}
@@ -58,14 +59,14 @@ const EditBook = () => {
                   Edit Book <br />
                   Libraries
                 </h1>
-                <p className="mt-4 text-black font-semibold">
-                  Quickly update your book to your preference.
+                <p className="mt-4 text-brown font-bold text-3xl">
+                  Quickly update a <br /> book  to <br /> your preference.
                 </p>
               </div>
             </div>
 
             {/* Right Side - Form */}
-            <form onSubmit={putBook} className="w-full md:w-1/2 flex flex-wrap gap-4 justify-start items-start bg-[#9b9998] rounded-xl px-4 py-6">
+            <form onSubmit={putBook} className="w-full md:w-1/2 flex flex-wrap gap-4 justify-start items-start bg-[#ddd9d7] rounded-xl px-4 py-6 mt-5">
               {/* Title */}
               <div className="flex flex-col w-full">
                 <label
@@ -80,7 +81,7 @@ const EditBook = () => {
                   placeholder="Enter book title"
                   required
                   defaultValue={book.Title}
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 />
               </div>
 
@@ -98,7 +99,7 @@ const EditBook = () => {
                   placeholder="Enter author's name"
                   required
                   defaultValue={book.Author}
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 />
               </div>
 
@@ -116,7 +117,7 @@ const EditBook = () => {
                   placeholder="e.g., 2023"
                   required
                   defaultValue={book.yearPublished}
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 />
               </div>
 
@@ -131,7 +132,7 @@ const EditBook = () => {
                 <select
                   name="Category"
                   required
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 >
                   <option value="">Select a category</option>
                   <option value="Fiction">Fiction</option>
@@ -161,7 +162,7 @@ const EditBook = () => {
                   placeholder="https://example.com/image.jpg"
                   required
                   defaultValue={book.ImageUrl}
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 />
               </div>
 
@@ -179,7 +180,7 @@ const EditBook = () => {
                   placeholder="Brief summary or notes"
                   required
                   defaultValue={book.Description}
-                  className="p-2 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-brown"
+                  className="p-2 rounded-md border border-gray-500 focus:outline-none focus:ring-1 focus:ring-brown"
                 />
               </div>
 
@@ -187,7 +188,7 @@ const EditBook = () => {
               <div className="mt-4 flex flex-col sm:flex-row gap-4 justify-center items-center w-full">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto px-10 py-2 bg-brown text-black font-semibold rounded-md hover:bg-gray-600 transition duration-300"
+                  className="w-full sm:w-auto px-10 py-2 bg-[#2C1C0C] text-white font-semibold rounded-md hover:bg-gray-600 transition duration-300"
                 >
                   Save
                 </button>
