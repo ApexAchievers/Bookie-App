@@ -7,7 +7,7 @@ import gray from "../assets/images/resized.png"
 
 export default function Footer() {
     return (
-        <footer className="bg-brown text-white mb-6 px-4 sm:px-8">
+        <footer className="bg-brown text-white px-4 sm:px-8">
             <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div className="text-center md:text-left ">
                     <img src={gray} className="h-20 w-auto object-contain mt-6 mx-auto md:mx-0" />

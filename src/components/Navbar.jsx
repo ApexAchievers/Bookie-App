@@ -10,7 +10,8 @@ export default function Navbar() {
 
         <nav className="fixed top-0 left-0 w-full z-50 h-20 px-8 bg-gray-300 flex items-center justify-between">
             <div className="flex items-center">
-                <img src={ezliblogo} className="h-20 w-auto object-contain" alt="EZLib Logo" />
+            <Link to="/" className="hover:underline">
+                <img src={ezliblogo} className="h-20 w-auto object-contain" alt="EZLib Logo" /></Link>
                 <span className="text-4xl font-bold text-brown ml-2">EZLib</span>
             </div>
 
@@ -19,11 +20,14 @@ export default function Navbar() {
                     <li><Link to="/" className="hover:underline">Dashboard</Link></li>
                     <li><Link to="/books" className="hover:underline">Books</Link></li>
                     <li><Link to="/add-book" className="hover:underline">Add Book</Link></li>
-                    <li><Link to="/view-book" className="hover:underline">View Book</Link></li>
+                    {/* <li><Link to="/view-book" className="hover:underline">View Book</Link></li> */}
                 </ul>
-                <button className="cursor-pointer border py-2 px-4 bg-brown text-white rounded-md font-bold text-xs">
-                    Get Started
-                </button>
+                <Link to="/sign-up" onClick={() => setMenuOpen(false)}>
+                    <button className="cursor-pointer border py-2 px-4 bg-brown text-white rounded-md font-bold text-xs">
+                        Get Started
+                    </button>
+                </Link>
+
             </div>
 
             {/* Mobile menu toggle button */}

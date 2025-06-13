@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider, } from "react-router";
+import SignUp from "./pages/Signup";
 import Home from "./pages/Home";
 import Books from "./pages/Books";
 import AddBook from "./pages/AddBook";
@@ -13,6 +14,7 @@ const bookieAppRouter = createBrowserRouter([
   { path: '/add-book', element: <AddBook /> },
   { path: '/view-book', element: <ViewBook /> },
   { path: '/edit-book', element: <EditBook /> },
+  { path: '/sign-up', element: <SignUp/> },
   { path: '*', element: <NotFound /> },
 ]);
 
