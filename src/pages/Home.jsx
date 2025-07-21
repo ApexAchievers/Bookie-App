@@ -4,12 +4,6 @@ import { Star, BarChart3, BookOpen, Users, Shield, CheckCircle, Search, Smile, A
 import { Link } from "react-router";
 import bookopened from "../assets/images/bookopened.PNG"
 import bookstack from "../assets/images/bookstack.PNG"
-import google from "../assets/images/Google.png"
-import harvard from "../assets/images/harvard.PNG"
-import cambridge from "../assets/images/cambridge.PNG"
-import unesco from "../assets/images/unesco.PNG"
-import nickelodeon from "../assets/images/nickelodeon.PNG"
-import disney from "../assets/images/disney.PNG"
 import feliimg from "../assets/images/feli.JPG"
 import jerushaimg from "../assets/images/jerusha.jpg"
 import stellaimg from "../assets/images/stella.jpg"
